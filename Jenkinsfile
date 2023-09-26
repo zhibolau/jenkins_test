@@ -1,9 +1,9 @@
 pipeline {
-    agent { docker 'python:3.5.1' }
+    agent { docker 'java:17' }
     stages {
         stage('build') {
             steps {
-                sh 'python --version'
+                sh 'java --version'
             }
         }
     }
