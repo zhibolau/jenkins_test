@@ -1,6 +1,14 @@
 pipeline {
     agent any
     stages {
+        stage('docker-agent-Test') {
+            agent {
+                docker { image 'node:7-alpine' }
+            }
+            steps {
+                sh 'node --version'
+            }
+        }
         stage('build') {
             steps {
                 sh 'java --version'
