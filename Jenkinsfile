@@ -1,14 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage('docker-agent-Test') {
-            agent {
-                docker { image 'node:latest' }
-            }
-            steps {
-                sh 'node --version'
-            }
-        }
         stage('build') {
             steps {
                 sh 'java --version'
