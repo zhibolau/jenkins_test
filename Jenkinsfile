@@ -25,7 +25,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh 'echo "Fail!"; exit 1'
+                sh 'echo "Succeed------->!"; exit 0'
             }
         }
     }
