@@ -11,5 +11,16 @@ pipeline {
                 '''
             }
         }
+        stage('Deploy') {
+            steps {
+                retry(3) {
+                    sh 'echo "DeployING---->"'
+                }
+
+                timeout(time: 3, unit: 'MINUTES') {
+                    sh 'echo health-check ING--->'
+                }
+            }
+        }
     }
 }
