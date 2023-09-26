@@ -18,7 +18,7 @@ pipeline {
                 }
 
                 timeout(time: 3, unit: 'MINUTES') {
-                    sh 'echo health-check ING--->'
+                    sh 'echo "health-check ING--->"'
                 }
             }
         }
