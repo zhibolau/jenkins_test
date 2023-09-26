@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('docker-agent-Test') {
             agent {
-                docker { image 'node:7-alpine' }
+                docker { image 'node:latest' }
             }
             steps {
                 sh 'node --version'
